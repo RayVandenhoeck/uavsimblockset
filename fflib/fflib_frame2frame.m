@@ -16,7 +16,7 @@
 %
 function pv_A = fflib_frame2frame(pv_B, pvB_A, qAttitudeB_A)
     % Rotate:
-    pv_A = quatrotate(quatconj(qAttitudeB_A'), pv_B')';
+    pv_A = ffb_quat2dcm(qAttitudeB_A')'*pv_B;
     % Translate:
     pv_A = pvB_A + pv_A;
 end
