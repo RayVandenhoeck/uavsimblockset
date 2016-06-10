@@ -33,7 +33,7 @@ Library {
 	$PropName		"ExplorerBarInfo"
 	$ObjectID		4
 	$ClassName		"Simulink.ExplorerBarInfo"
-	Visible			[1]
+	Visible			[0]
       }
       Object {
 	$PropName		"EditorsInfo"
@@ -42,7 +42,7 @@ Library {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[909.0, 982.0]
+	Extents			[909.0, 1021.0]
 	ZoomFactor		[1.75]
 	Offset			[0.0, 0.0]
       }
@@ -54,9 +54,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "j.bolting"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jun 08 12:27:01 2016"
-  RTWModifiedTimeStamp	  387065296
-  ModelVersionFormat	  "1.%<AutoIncrement:1173>"
+  LastModifiedDate	  "Fri Jun 10 12:50:48 2016"
+  RTWModifiedTimeStamp	  387463841
+  ModelVersionFormat	  "1.%<AutoIncrement:1174>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -813,7 +813,7 @@ Library {
   System {
     Name		    "uavsimBlockset_Cularis_withUAV3D"
     Location		    [0, 0, 768, 932]
-    Open		    off
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -833,10 +833,10 @@ Library {
       SID		      "4427"
       Ports		      [1, 2]
       Position		      [615, 203, 955, 432]
-      ZOrder		      1950
+      ZOrder		      2005
       ForegroundColor	      "red"
       BackgroundColor	      "yellow"
-      LibraryVersion	      "*1.1173"
+      LibraryVersion	      "1.1173"
       ShowPortLabels	      "FromPortBlockName"
       RequestExecContextInheritance off
       Variant		      off
@@ -857,14 +857,14 @@ Library {
 	    Type		    "edit"
 	    Name		    "aircraftmask_phithetapsi0"
 	    Prompt		    "Initial Euler angles [rad]"
-	    Value		    "uavsim.formation(closedloopmask_ID).phithetapsi0"
+	    Value		    "uavsim.formation(1).phithetapsi0 + [deg2rad(10) 0 0]'"
 	  }
 	  Object {
 	    $ObjectID		    20
 	    Type		    "edit"
 	    Name		    "aircraftmask_p0_NED_m"
 	    Prompt		    "Initial position, NED frame [m]"
-	    Value		    "uavsim.formation(closedloopmask_ID).p0_NED' "
+	    Value		    "uavsim.formation(1).p0_NED' "
 	  }
 	  Object {
 	    $ObjectID		    21
@@ -878,7 +878,7 @@ Library {
 	    Type		    "edit"
 	    Name		    "aircraftmask_pqr0"
 	    Prompt		    "Initial rotation rates, body frame [rad/s]"
-	    Value		    "uavsim.formation(closedloopmask_ID).omega0"
+	    Value		    "uavsim.formation(1).omega0"
 	    Tunable		    "off"
 	  }
 	  Object {
@@ -886,21 +886,21 @@ Library {
 	    Type		    "edit"
 	    Name		    "aircraftmask_uvw0"
 	    Prompt		    "Initial velocity, body frame [m/s]"
-	    Value		    "uavsim.formation(closedloopmask_ID).uvw0"
+	    Value		    "uavsim.formation(1).uvw0"
 	  }
 	  Object {
 	    $ObjectID		    24
 	    Type		    "edit"
 	    Name		    "aircraftmask_phithetapsi_trim"
 	    Prompt		    "Trim Euler angles [rad]"
-	    Value		    "uavsim.formation(closedloopmask_ID).phithetapsi0"
+	    Value		    "uavsim.formation(1).phithetapsi0"
 	  }
 	  Object {
 	    $ObjectID		    25
 	    Type		    "edit"
 	    Name		    "aircraftmask_ID"
 	    Prompt		    "Aircraft ID"
-	    Value		    "closedloopmask_ID"
+	    Value		    "1"
 	  }
 	  Object {
 	    $ObjectID		    26
@@ -949,7 +949,7 @@ Library {
       }
       System {
 	Name			"UAV A"
-	Location		[0, 0, 1344, 933]
+	Location		[304, 0, 1536, 933]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -961,8 +961,8 @@ Library {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"150"
-	SIDHighWatermark	"11155"
+	ZoomFactor		"125"
+	SIDHighWatermark	"11167"
 	Block {
 	  BlockType		  Inport
 	  Name			  "u"
@@ -974,7 +974,7 @@ Library {
 	  Port {
 	    PortNumber		    1
 	    Name		    "u_c"
-	    PropagatedSignals	    "u_c"
+	    PropagatedSignals	    "CMD"
 	    RTWStorageClass	    "Auto"
 	    DataLogging		    on
 	    DataLoggingNameMode	    "SignalName"
@@ -1032,7 +1032,7 @@ Library {
 	  Position		  [1635, 271, 1730, 329]
 	  ZOrder		  2407
 	  ForegroundColor	  "yellow"
-	  LibraryVersion	  "1.922"
+	  LibraryVersion	  "1.923"
 	  SourceBlock		  "formationFlyingBlockset/Environment and terrain\n- turbulent wind -"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off

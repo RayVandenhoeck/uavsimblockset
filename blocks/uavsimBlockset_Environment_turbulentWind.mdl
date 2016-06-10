@@ -18,7 +18,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-3.0, 0.0, 1541.0, 940.0]
+      Location		      [-3.0, 0.0, 1540.0, 940.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -27,13 +27,13 @@ Library {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
 	$ObjectID		4
 	$ClassName		"Simulink.ExplorerBarInfo"
-	Visible			[1]
+	Visible			[0]
       }
       Object {
 	$PropName		"EditorsInfo"
@@ -42,9 +42,9 @@ Library {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1876.0, 992.0]
+	Extents			[1875.0, 1031.0]
 	ZoomFactor		[2.9999999999999991]
-	Offset			[1149.7379902930552, 103.90531885548984]
+	Offset			[1149.7379902930552, 103.9053188554899]
       }
     }
   }
@@ -54,9 +54,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "j.bolting"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat May 28 15:07:10 2016"
-  RTWModifiedTimeStamp	  386348819
-  ModelVersionFormat	  "1.%<AutoIncrement:1219>"
+  LastModifiedDate	  "Fri Jun 10 12:50:50 2016"
+  RTWModifiedTimeStamp	  387463838
+  ModelVersionFormat	  "1.%<AutoIncrement:1220>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -877,7 +877,7 @@ Library {
   }
   System {
     Name		    "uavsimBlockset_Environment_turbulentWind"
-    Location		    [-3, 0, 1538, 940]
+    Location		    [-3, 0, 1537, 940]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -901,7 +901,7 @@ Library {
       ZOrder		      1225
       ForegroundColor	      "red"
       BackgroundColor	      "yellow"
-      LibraryVersion	      "*1.1218"
+      LibraryVersion	      "*1.1219"
       RequestExecContextInheritance off
       Variant		      off
       Object {
@@ -944,7 +944,7 @@ Library {
       }
       System {
 	Name			"Environment\nturbulent wind"
-	Location		[-3, 0, 1538, 940]
+	Location		[304, 0, 1536, 933]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1099,7 +1099,7 @@ Library {
 	  spec			  "MIL-F-8785C"
 	  model			  "Discrete Dryden (+q -r)"
 	  W20			  "norm(mask_constantwind_NED_mps)"
-	  Wdeg			  "rad2deg(uavsimblockset_cartesianToAngle(mask_constantwind_NED_mps(1), mask_constantwind_NED_mps(2)))"
+	  Wdeg			  "rad2deg(fflib_cartesianToAngle(mask_constantwind_NED_mps(1), mask_constantwind_NED_mps(2)))"
 	  TurbProb		  "10^-2 - Light"
 	  L_high		  "533.4"
 	  Wingspan		  "mask_wingspan"
